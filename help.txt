@@ -1,0 +1,21 @@
+- For timer:
+    https://stackoverflow.com/questions/32465991/best-way-to-store-time-above-240000-in-postgresql
+
+- Regex to match all emojis
+    https://www.regextester.com/106421
+
+- Things to do before MVP launch
+    -> Update state ✅
+    -> Form Validation ✅
+    -> Make the form better ✅
+    -> Stats page
+    -> Implement Auth ✅
+    -> Refactor the code (with comments)
+    -> Refactor color classes
+    -> Logout function ✅
+    -> Redirects 🔨
+    -> Landing page
+
+- After MVP
+    -> Improve the emoji regex
+    -> 
