@@ -4,6 +4,7 @@
 	// @ts-ignore
 	import OutClick from 'svelte-outclick';
 	import { openDropdown } from 'src/stores';
+	import { goto } from '$app/navigation';
 
 	// Variables
 	let styles =
@@ -16,6 +17,7 @@
 	const handleLogout = () => {
 		closeDropdown();
 		supabase.auth.signOut();
+		goto('/login');
 	};
 </script>
 

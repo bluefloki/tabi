@@ -8,6 +8,7 @@
 	import type { ValidatorConfig } from '@felte/validator-zod';
 	import * as zod from 'zod';
 	import { supabase } from 'src/utils/supabase';
+	import { goto } from '$app/navigation';
 
 	// Variables
 	let loading: boolean = false;
@@ -40,11 +41,10 @@
 			message = { success: false, display: errorMsg };
 		} finally {
 			loading = false;
-			return {
-				headers: {
-					Location: '/app'
-				}
-			};
+			if (message.success === true) {
+				reset();
+				goto('/app');
+			}
 		}
 	};
 
@@ -53,7 +53,6 @@
 		validateSchema: schema,
 		onSubmit: (values) => {
 			handleLogin(values);
-			reset();
 		}
 	});
 </script>
