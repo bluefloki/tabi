@@ -2,14 +2,14 @@
 	import { get } from 'svelte/store';
 	import { user } from 'src/stores';
 
-	export async function load() {
-		if (!get(user))
-			return {
-				status: 302,
-				redirect: '/login'
-			};
-		return {};
-	}
+	// export async function load() {
+	// 	if (!get(user))
+	// 		return {
+	// 			status: 302,
+	// 			redirect: '/login'
+	// 		};
+	// 	return {};
+	// }
 </script>
 
 <script>
